@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource">
+
+    <Button
+        android:id="@+id/up"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="15dp"
+        android:backgroundTint="#FF9800"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/down"
+        app:layout_constraintStart_toStartOf="@+id/down" />
+
+    <Button
+        android:id="@+id/down"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#FF9800"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/left"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#8A8A8A"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/right"
+        app:layout_constraintTop_toTopOf="@+id/right" />
+
+    <Button
+        android:id="@+id/right"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#8A8A8A"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/up" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="280dp"
+        android:layout_height="00dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/ledon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#303030"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/down"
+        app:layout_constraintStart_toEndOf="@+id/up"
+        app:layout_constraintTop_toTopOf="@+id/up"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/straight"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#303030"
+        app:layout_constraintBottom_toBottomOf="@+id/down"
+        app:layout_constraintEnd_toEndOf="@+id/right"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/left" />
+
+    <Button
+        android:id="@+id/tracking"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#4CAF50"
+        android:text="tracking"
+        app:layout_constraintBottom_toBottomOf="@+id/ledon"
+        app:layout_constraintEnd_toEndOf="@+id/videoView"
+        app:layout_constraintTop_toTopOf="@+id/ledon" />
+
+    <Button
+        android:id="@+id/remote"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#303030"
+        android:layout_marginTop="10dp"
+        android:text="remote"
+        app:layout_constraintEnd_toEndOf="@+id/tracking"
+        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintStart_toStartOf="@+id/tracking"
+        app:layout_constraintTop_toBottomOf="@+id/tracking" />
+
+    <Button
+        android:id="@+id/ledon"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#FF9800"
+        android:text="led on"
+        app:layout_constraintStart_toStartOf="@+id/videoView"
+        app:layout_constraintTop_toTopOf="@+id/stop" />
+
+    <Button
+        android:id="@+id/ledoff"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#303030"
+        android:text="led off"
+        app:layout_constraintBottom_toBottomOf="@+id/remote"
+        app:layout_constraintEnd_toEndOf="@+id/ledon"
+        app:layout_constraintStart_toStartOf="@+id/ledon"
+        app:layout_constraintTop_toTopOf="@+id/remote" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
